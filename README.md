@@ -1,6 +1,6 @@
 # sticker.webp
 
-express yourself with `sticker.webp` utility! it currently only supports `kitty` terminal.
+express yourself with `sticker.webp` utility! it currently only supports `kitty`, `foot`, `konsole` and `xfce4-terminal`.
 
 ## usage
 

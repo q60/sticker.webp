@@ -19,14 +19,24 @@
       packages = {
         default = stdenv.mkDerivation rec {
           name = "sticker.webp";
-          pname = name;
+
+          buildInputs = with pkgs; [
+            bash
+            coreutils-full
+            gnused
+            procps
+            gnugrep
+            gawk
+            findutils
+            libsixel
+          ];
 
           src = ./.;
 
           dontBuild = true;
           installPhase = ''
             runHook preInstall
-            install -Dm755 -t $out/bin sticker.webp
+            install -Dm755 -t $out/bin ${name}
             runHook postInstall
           '';
         };
